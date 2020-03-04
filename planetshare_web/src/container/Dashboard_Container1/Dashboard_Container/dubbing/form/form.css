@@ -1,0 +1,20 @@
+#priority{color: black!important; font-size: 13px!important; text-shadow: 1px 1px 1px gray;}
+#original_language{color: black!important; font-size: 14px!important; border: 1px solid #ced4da !important; text-shadow: 1px 1px 1px gray; padding: 8px !important; border-radius: 4px!important; }
+#language{color: black!important; font-size: 13px!important; text-shadow: 1px 1px 1px gray;}
+.css-bg1rzq-control{font-size: 14px!important;}
+#save_button{
+    font-size: 20px!important;
+  border-radius: 5px!important;
+}
+.css-bg1rzq-control {
+    font-size: 13px !important;
+}
+.col_css{
+  border: 1px solid;
+box-shadow: 0 4px 7px rgba(32,41,50,0.52);
+padding: 20px;
+}
+#notification_div{
+  font-size: 13px!important;
+  color: black!important;
+}

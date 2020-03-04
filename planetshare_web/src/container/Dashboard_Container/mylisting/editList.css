@@ -1,0 +1,63 @@
+ .circle_edit {
+ /* background:rgba(0,0,0,0.6);
+ display: inline-block; */
+}
+
+.circle_edit .edit_btn {
+  border-radius: 50%;
+
+  background: none;
+
+  line-height: 17px;
+
+  height: 165px;
+
+  /* background: #8caeca96; */
+
+  width: 168px;
+
+  border: none;
+
+}
+
+  .edit_icon {
+
+      position: relative;
+      top: -80px;
+      color: #594E4E;
+      font-size: 22px;
+      border-radius:50%;
+      margin: auto;
+      padding:5px;
+      background: #fff;
+
+  }
+  .circle_edit .edit_btn:hover {
+box-shadow: none !important;
+  }
+.update_btn #form_save {
+
+    padding: 10px !important;
+    max-width: 100px;
+    float: right;
+
+}
+
+
+/*add css by rohit*/
+#contact-form { position:relative; }
+#contact-form h1 { padding-bottom: 15px; text-align: center; margin-bottom: 70px; position: relative; margin-top: 0px; text-transform: uppercase; color:#333;}
+#contact-form h1:before { content: ""; display: inline-block; position: absolute; width: 150px; height: 3px; background:rgb(12, 120, 206); bottom: 0px; left: 50%; transform: translateX(-50%); -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);  }
+#contact-form input { border-radius: 5px; height: 40px; padding: 7px 10px; line-height: 26px;}
+#contact-form select { border-radius: 5px !important; height: 40px !important; padding: 7px 20px 7px 10px !important; line-height: 26px;}
+#contact-form button[type="submit"] { display: inline-block; min-width: 200px; float:right; height: 45px; border-radius: 10px; padding: 10px 15px; line-height: 25px; font-weight: 600; text-transform: uppercase;}
+#contact-form .circle_edit { position: absolute; top: 30px; right: 20px; z-index: 9;}
+#contact-form .circle_edit .fileuploader-btn { text-align: center; }
+#contact-form .circle_edit .edit_btn { height: auto; position: relative; width: auto; }
+#contact-form .circle_edit .edit_icon { top: 50%; position: absolute; left: 50%; z-index: 9; display: inline-block; transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
+#contact-form #jw-player { margin-bottom: 20px; }
+#contact-form .form-group label { font-weight: 600; }
+
+@media (max-width: 991px) {
+  #contact-form h1 { font-size: 22px !important; }
+}

@@ -1,0 +1,19 @@
+.subtitle_checkbox li{
+  display:inline-block !important;
+  padding:20px;
+}
+#output_div{
+  color: black!important;
+  font-size: 13px!important;
+}
+#notification_div{
+  color: black!important;
+  font-size: 13px!important;
+}#priority{
+  color: black!important;
+  font-size: 13px!important;
+}
+#save_button{
+border-radius: 14px!important;
+
+}

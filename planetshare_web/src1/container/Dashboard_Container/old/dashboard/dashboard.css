@@ -1,0 +1,16 @@
+body, .navbar.default-layout { font-family: "open-sans", sans-serif;}
+  .navbar.default-layout .navbar-brand-wrapper .navbar-brand img {
+  width: calc(255px - 100px);
+  max-width: 100%;
+  height: auto !important;}
+  .nav .nav-item.dropdown .navbar-dropdown, .navbar-nav .nav-item.dropdown .navbar-dropdown {
+   padding: 20px;text-align: center;
+  width: 18rem;}
+  .navbar.default-layout { background: linear-gradient(120deg, #5f85e3, #0c78ce);}
+  .mdi-18px { font-size: 18px; }
+.mdi-24px { font-size: 24px; }
+.mdi-36px { font-size: 36px; }
+.mdi-48px { font-size: 48px; }
+.manage-account{color: rgb(63, 63, 63) !important;}
+.nav-link1 {    padding: 0.67rem 0rem 0 0 !important; color:rgb(63, 63, 63) !important; margin-bottom: 0.1rem !important; font-size: 13px !important;}
+.text-indent5{text-indent:5px}

@@ -1,0 +1,42 @@
+.video_descript_input input[type="text"]{
+  border :1px solid lightgray !important;
+  border-radius: 10px!important;
+  padding: 8px!important;
+  font-size: 14px!important;
+}
+
+.video_descript_input select{
+  border:2px solid lightgray !important;
+  font-size: 12px!important;
+    padding: 5px!important;
+    border-radius: 10px!important;
+    height: 35px!important;
+}
+.video_descript_input textarea{
+  border:2px solid lightgray !important;
+  font-size: 12px!important;
+    padding: 5px!important;
+    border-radius: 5px!important;
+
+}
+.video_descript_input  input::placeholder{
+  color: rgba(12, 18, 28, 0.6) !important;
+font-size: 12px!important;
+}
+.video_descript_input select ::placeholder{
+  color: rgba(12, 18, 28, 0.6) !important;
+font-size: 12px!important;
+}
+.butt_video{
+  border-radius: 10px!important;
+}
+#form_save{
+  border-radius: 12px!important;
+}
+#form_reset{
+  border-radius: 12px!important;
+}
+.pre_me{
+  font-size: 14px!important;
+  color: #595656!important;
+}

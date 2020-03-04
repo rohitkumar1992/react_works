@@ -1,0 +1,5 @@
+@media (min-width: 768px){.navbar-expand-md .navbar-collapse { display: block !important; }
+
+@media (min-width: 1400px) {
+  .home_banner .item img { height: 700px !important; }
+}

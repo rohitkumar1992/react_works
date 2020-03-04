@@ -1,0 +1,24 @@
+.inner-addon input::placeholder{
+  color:#222 !important;
+  font-size:13px !important;
+}
+
+.login_form input[type="checkbox"] {
+    height: 15px;
+	    margin-top: 7px;
+}
+.login_form .col-md-10.term {
+    padding-left: 5px;
+}
+
+.login_form input#name {
+    height: 40px;
+    font-size: 14px;
+}
+
+.login_form button.dis_button {
+    margin:15px 0;
+    border-radius: 20px !important;
+}
+
+.login_form button.dis_button:hover { background:#000 !important; color:#fff;}

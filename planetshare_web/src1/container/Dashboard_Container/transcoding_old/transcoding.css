@@ -1,0 +1,28 @@
+
+.drag-and-drop-q6 {
+    width: 390px;
+    height: 264px;
+    border: 1px dashed #d9e0ea;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.drag-and-drop-icon{width: 66px; height: 46px; margin: 0 auto; background-position: center; background-size: cover;
+background-image: url(/img/cloud-upload.png);
+background-repeat: no-repeat;}
+
+.drag-and-drop-title{font-size: 12px}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+

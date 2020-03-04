@@ -1,0 +1,126 @@
+
+/*
+body {
+  font-family: 'Lato', sans-serif;
+} */
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /*background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);*/
+  background-color: white;
+  overflow-y: hidden;
+  overflow-x  : hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: -10px;
+  right:5px;
+  font-size: 40px;
+}
+.login_img{
+
+}
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;overflow-x: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.fa-icons{
+width:20px !important;
+height:20px !important;
+position: absolute !important;
+}
+.modal_login_button{
+  font-weight: bold !important;
+}
+.main_nav ul.nav.navigation ul.dropdown-menu{top:10px;}
+.main_nav ul.nav.navigation ul.dropdown-menu:after {
+    content: '';
+    position: absolute;
+    left: 0;
+	right:0;
+	margin:auto;
+    top: -6px;
+    width: 11px;
+    height: 11px;
+    background: #fff;
+    transform: rotate(45deg);
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.main_nav ul.nav.navigation ul.dropdown-menu li a {
+    padding: 6px 10px;
+}
+.main_nav  ul.nav.navigation ul.dropdown-menu li:hover a{background:#007bff; color:#fff;}
+
+
+/* 12-06-2019 */
+.first_login_user ul a{padding:6px 10px;}
+.first_login_user ul a:hover  {background: #007bff;
+    color: #fff;
+}
+
+.user_btn .btn{
+      background: #007bff;
+    height: 30px;
+    width: 30px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 8px;
+    border-radius: 50%;
+}
+
+
+/*add 3dec2019*/
+.navbar-expand-lg .navbar-nav li a.user_btn { top: -3px; position: relative;}
+.navbar-expand-lg .navbar-nav li.cart .nav-link { position: relative;}
+.navbar-expand-lg .navbar-nav li.cart .nav-link .item_count {
+    display: inline-block;
+    position: absolute;
+    right: -3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    line-height: 20px;
+    background: rgba(202,52,100,1);
+    top: 0px;
+    font-weight: bold;
+}
+/*end*/

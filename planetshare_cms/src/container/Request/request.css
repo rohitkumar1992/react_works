@@ -1,0 +1,98 @@
+#input_text{
+border: 1px solid gray !important;
+padding: 1px;
+
+}
+th{
+  color:black !important;
+  padding:14px!important;
+  font-weight: 400;
+}
+td{
+
+  text-align: center;
+}
+.table_content{
+  background-color:white!important;
+}
+.table_img
+{
+  width:50px;
+  height:34px;
+  border-radius:5%;
+}
+.but_1{
+  font-size: 12px!important;
+  width: 116px!important;
+  height: 28px!important;
+}
+@media screen and (max-width: 760px) {
+  .pagination_new {
+    position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }}
+
+  .show_entity {
+    position: relative;
+  float: left;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  }
+  #input_text{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+
+
+  }
+  #select_box{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+
+
+  }
+.width_set{text-align: inherit;}
+
+.table td, .table th {
+  padding-left: 14px!important;
+  vertical-align: top;
+  border-top: 1px solid white;
+}
+.page_br{
+  background-color: white;
+}
+.ser_width{
+  text-align: inherit!important;
+  vertical-align: middle !important;
+}
+.table td, .table th {
+    /* padding-left: 2px !important;
+    padding: 0.01rem!important;
+vertical-align: middle !important; */
+/* overflow: hidden;
+text-overflow: ellipsis; */
+}
+.link_col{
+  color:#357ebd !important;
+text-decoration: none !important;
+}
+a:hover{
+  text-decoration: none !important;
+}
+.thead_1{
+  border-top:2px solid ligthgray;
+}
+.tr_1{
+  border-bottom: 2px solid lightgray;
+}

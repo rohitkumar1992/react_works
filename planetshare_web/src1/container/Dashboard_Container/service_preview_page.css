@@ -1,0 +1,45 @@
+.service_preview {  }
+.service_preview .container { padding: 0px 15px; }
+.service_preview .preview_table { margin: 0 auto; width: 500px; position: relative; }
+.service_preview .profile-img { position: absolute; left: -160px; top: 0px; display: inline-block; }
+.service_preview .table { display: table; margin: 0 auto; border-collapse: collapse;}
+.service_preview .table_r { display: table-row; }
+.service_preview .table_c { display: table-cell; width: 50%; padding: 10px 10px; vertical-align: middle; border: 1px solid #ddd; }
+.service_preview .table_c:first-child label { font-weight: 600; }
+.service_preview .table_c label { transform: none; margin-bottom: 0px; line-height: 20px !important; display: inline-block; float:left; width: 100%; }
+.service_preview .table_c p { margin: 0px !important; line-height: 20px !important; font-size: 0.72rem !important; width: 100%; display: inline-block; }
+.service_preview .table_c p td { padding: 0px !important; }
+.service_preview .table_c .row { margin: 0px; }
+.service_preview .table_c .row > div {  }
+.service_preview .table_r:nth-child(odd) .table_c { background:#f1f1f1; }
+.service_preview .buttons { width: 100%; overflow: hidden; text-align: center; margin-top: 10px; }
+.service_preview .buttons a { display: inline-block; margin-top: 20px; }
+.service_preview .buttons a button { padding: 10px 20px; }
+.service_preview .buttons button { padding: 10px 10px; margin: 10px 10px 0px 10px !important; display: inline-block; float:none !important; margin-top: 20px; }
+.service_preview .table_r.last .table_c { background:#090328; }
+.service_preview .table_r.last .table_c label { color:#fff; font-size: 18px; font-weight: 600; }
+.service_preview .table_r.last .table_c p { color:#fff; font-size: 18px !important; font-weight: 600; }
+
+
+@media (max-width: 991px) {
+  .service_preview .preview_table { width: 100%; float:right; }
+  .service_preview .profile-img { width: 20%; left: 0px; }
+  .service_preview .table { width: 80%; float:right; }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 567px) {
+  .service_preview .profile-img { width: 160px; margin: 0 auto; position: relative; display: block; }
+  .service_preview .table { width: 100%; }
+  .service_preview .table { display: block; width: 100%; }
+  .service_preview .table_r { display: block; width: 100%; }
+  .service_preview .table_c:first-child label { font-size: 14px; }
+  .service_preview .table_c { display: block; width: 100%; overflow: hidden;}
+}
+
+@media (max-width: 479px) {
+
+}

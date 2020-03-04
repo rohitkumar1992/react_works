@@ -1,0 +1,12 @@
+.menu-title{
+  color:black !important;
+  font-weight: 400 !important;
+}
+.gap{
+  margin-top:50px;
+}
+
+.add_services_heading{ margin:auto; }
+
+.add_services_heading span { margin: auto;text-align: center; width: auto; color: #0c78ce;    font-weight: bold;
+    font-size: 29px;}

@@ -1,0 +1,99 @@
+#notification_div{color: black!important; font-size: 14px!important;}
+
+#priority{color: black!important; font-size: 14px!important;}
+.css-bg1rzq-control{font-size: 14px!important;}
+#save_button{
+    font-size: 20px!important;
+  border-radius: 5px!important;
+}
+
+#width{border: 1px solid #ced4da !important;}
+.col_tagging{
+  border: 1px solid;
+box-shadow: 0 4px 7px rgba(32,41,50,0.52);
+padding: 40px;
+padding-bottom:  150px!important;
+padding-top: 50px;
+}
+
+
+#save_button{
+    font-size: 20px!important;
+  border-radius: 5px!important;
+}
+.css-bg1rzq-control {
+    font-size: 13px !important;
+}
+.col_css{
+  border: 1px solid;
+box-shadow: 0 4px 7px rgba(32,41,50,0.52);
+padding: 20px;
+}
+#notification_div{
+  font-size: 13px!important;
+  color: black!important;
+}
+
+#original_lang_drop_down input::placeholder{
+	color:#807b7b !important;
+	font-size:12px !important;
+	font-weight:300 !important
+}
+i.fa.fa-question-circle {
+    color: #6fa5f3;
+}
+
+
+.dashboard_services h3 {
+    position: relative;
+    margin-bottom: 2em !important;
+    padding-bottom: 5px;
+}
+
+.dashboard_services h3:after{position: absolute;
+    width: 100px;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    right: 0;
+    margin: auto;
+    border-bottom: 2px solid #97d3e0;
+}
+
+.dashboard_services button#save_button {
+    border-radius: 28px !important;
+    background: none;
+    color: #0c78ce;
+    font-size: 14px !important;
+    transition: 0.3s;
+    padding: 10px 35px !important;
+}
+
+.dashboard_services button#save_button:hover { background-color: #1d62dd; color: #fff; }
+.dashboard_services .__react_component_tooltip.type-dark {
+    color: #fff;
+    background-color: #fbb145;
+}
+
+.dashboard_services .__react_component_tooltip.type-dark.place-right:after {
+    border-right-color: #fbb145;}
+
+
+/*add css by rohit kumar*/
+.avail_ser_form h3 { color:#000 !important; }
+.avail_ser_form .container { max-width: 1170px !important; }
+.avail_ser_form h3:after { border-bottom: 2px solid rgb(202, 52, 100); }
+.avail_ser_form i.fa.fa-question-circle { color:rgb(202, 52, 100); }
+.avail_ser_form button#save_button { background: rgb(202, 52, 100); color:#fff; }
+.avail_ser_form button#save_button:hover { background: #000; }
+.avail_ser_form form { width: 500px; display: block; margin: 0 auto; text-align: center; }
+.avail_ser_form form .box_area { width: 100%; }
+.avail_ser_form form .box_area .box { position: relative; display: inline-block; width:100%; }
+.avail_ser_form form .box_area .box label { min-width: 100px; margin-bottom: 10px; text-align: left; width: 100%;  }
+.avail_ser_form form .box_area .box a.q { position: absolute; display: inline-block; right: -20px; top: 5px; }
+.avail_ser_form form button { display: inline-block; float:none; }
+
+@media (max-width: 767px) {
+  .avail_ser_form form { width: 100%; }
+  .avail_ser_form h3 { font-size: 24px !important; }
+}

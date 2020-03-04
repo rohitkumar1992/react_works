@@ -1,0 +1,19 @@
+.report_section h6{ float: left; margin-top: 0; }
+.report_section a{ float:right; font-weight: bold; }
+.payment_box{padding:0px 30px 20px;}
+@media (min-width:768px ){
+
+.report_section h6{ float: none; display: block; margin-bottom: 0;font-size:14px }
+.report_section a{float: left;font-size:12px}
+
+}
+
+@media (max-width:767px) {
+  .payment_box .card-body h6 {  }
+}
+@media (max-width:479px) {
+  .payment_box { text-align: center; padding: 0px 0px 20px; }
+  .payment_box .card-body h6 { display:block; float:none; }
+  .payment_box .card-body p { text-align: center; }
+  .payment_box .card-body a  { display: inline-block; float:none; }
+}

@@ -1,0 +1,28 @@
+.input_4 input[type="text"]{
+  border: 1px solid lightgray!important;
+  border-radius: 6px!important;
+  font-size: 14px!important;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+}
+.input_5 textarea{
+  border: 1px solid lightgray!important;
+  border-radius: 6px!important;
+  font-size: 14px!important;
+}
+#next_button{
+  width: 100px!important;
+}
+
+.seller_detail { margin-top: 80px; }
+#myform { padding-top: 50px; }
+#myform h1 { padding-bottom: 15px; margin-bottom: 70px; position: relative; margin-top: 0px; text-transform: uppercase; color:#333;}
+#myform h1:before { content: ""; display: inline-block; position: absolute; width: 150px; height: 3px; background:rgb(12, 120, 206); bottom: 0px; left: 50%; transform: translateX(-50%); -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);  }
+#myform .fields { border: 1px solid #ddd; padding: 30px 30px; margin-bottom: 60px; position: relative; width: 100%; }
+#myform .fields.last { margin-bottom: 0px; }
+#myform .fields h2 { display: inline-block; font-size: 25px; line-height: 34px; padding: 10px 20px; color:#646262; position: absolute; top: -27px; left: 30px; background:#fff; }
+#myform .fields label { padding-bottom: 5px; display: block; overflow: hidden; line-height: 20px;}
+#myform .fields input { border-radius: 5px; height: 40px; padding: 7px 10px; line-height: 26px;}
+#myform .fields textarea { resize: none; height: 210px; overflow-y: auto; }
+#myform .buttons { width: 100%; overflow: hidden; padding-top: 20px; text-align: center;}
+#myform .buttons button { display: inline-block; min-width: 200px; float:none; height: 45px; border-radius: 10px; padding: 10px 15px; line-height: 25px; font-weight: 600; text-transform: uppercase;}

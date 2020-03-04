@@ -1,0 +1,219 @@
+.input_wrapper{position:relative}
+.plastic_select, input[type=url], input[type=text], input[type=tel], input[type=number], input[type=email], input[type=password], select, textarea {
+    font-size: 1.25rem;
+    line-height: normal;
+    padding: .75rem;
+    border: 1px solid #C5C5C5;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    color: #555459;
+    width: 100%;
+    max-width: 100%;
+    font-family: Slack-Lato,appleLogo,sans-serif;
+    margin: 0 0 .5rem;
+    -webkit-transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
+    -moz-transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
+    transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-shadow: none;
+    height: auto;
+}
+.pincode-input-container
+{
+  .pincode-input-text
+  {
+    padding:0 !important;
+    margin:0 2px;
+    text-align:center;
+    border: 1px solid;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+  }
+  .pincode-input-text:focus
+  {
+    outline:none;
+    box-shadow:none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-signin {  border: 0;  border-radius: 1rem;  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);}
+.card-signin .card-title { margin-bottom: 2rem; font-weight: 300; font-size: 1.5rem;}
+
+.card-signin .card-body {  padding: 2rem;}
+
+.form-signin {  width: 100%;}
+
+.form-signin .btn {  font-size: 80%;  border-radius: 5rem;  letter-spacing: .1rem;  font-weight: bold;  padding: 1rem;  transition: all 0.2s;
+}
+
+.form-label-group {  position: relative;  margin-bottom: 1rem;}
+
+.form-label-group input {  height: auto;  border-radius: 2rem;}
+
+.form-label-group>input,
+.form-label-group>label {  padding: var(--input-padding-y) var(--input-padding-x);}
+
+.form-label-group>label{position: absolute;top: 0;left: 0;display: block;width: 100%;margin-bottom: 0;line-height: 1.5;color: #495057;border: 1px solid transparent;border-radius: .25rem;transition: all .1s ease-in-out}
+
+.form-label-group input::-webkit-input-placeholder {  color: transparent;}
+
+.form-label-group input:-ms-input-placeholder { color: transparent;}
+
+.form-label-group input::-ms-input-placeholder {  color: transparent;}
+
+.form-label-group input::-moz-placeholder {  color: transparent;}
+
+.form-label-group input::placeholder {  color: transparent;}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));  padding-bottom: calc(var(--input-padding-y) / 3);}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);  padding-bottom: calc(var(--input-padding-y) / 3);  font-size: 12px;  color: #777;}
+
+.btn-google {  color: white !important;  background-color: #ea4335 !important}
+.close-btn {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0IxQjFCMSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTQgMS40MUwxMi41OSAwIDcgNS41OSAxLjQxIDAgMCAxLjQxIDUuNTkgNyAwIDEyLjU5IDEuNDEgMTQgNyA4LjQxIDEyLjU5IDE0IDE0IDEyLjU5IDguNDEgN3oiLz4KICAgICAgICA8cGF0aCBkPSJNLTUtNWgyNHYyNEgtNXoiLz4KICAgIDwvZz4KPC9zdmc+Cg==) center center no-repeat;
+  width: 24px;height: 24px;top: 17px;right: 17px;position: absolute;cursor: pointer;}
+.btn-padding {     padding: .575rem .75rem;}
+.login-title{font-size: 1.1rem !important;color: #212121;text-transform: none;text-transform: initial;color: black !important;font-weight: bold}
+.btn-facebook{color: #fff;-webkit-border-radius: 3px;-moz-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;text-transform: uppercase;background: #3f51b5;background-image: none;border: none;position: relative;-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);-o-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);background-image: linear-gradient(99deg,##3b5998,#3f51b5);width: 100%;cursor: pointer}
+
+.login-form, .btn-phone{color: #fff;white-space: initial;-webkit-border-radius: 3px;-moz-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;text-transform: uppercase;background: #429321;background-image: none;border: none;position: relative;-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);-o-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);background-image: linear-gradient(99deg,#429321,#19ae0b);width: 100%}
+
+hr.style-four {font-size: 0.61rem !important;padding: 0;border: none; border-top: 1px solid #ced4da; color: #838383;text-align: center;}
+hr.style-four:after{content: "OR";display: inline-block;position: relative;top: -0.8em;font-size: 1.5em;padding: 0 0.25em;background: white}
+
+ .toggle-sign-msg .link { font-size: 14px;  text-transform: uppercase;}
+.toggle-sign-msg .link { padding-left: 5px;}
+.link{cursor:pointer;color: #0681CB ;font-size: 14px;display: inline-block;background: 0 0;border: 0;padding: 0;padding-left: 0px;margin: 0}
+
+.login-form .form-wrapper .toggle-sign-msg {font-size: 16px; font-weight: 500; color: #212121; text-align: center; margin-top: 12px;}
+.btn{white-space: initial !important;}
+ .ReactModal__Overlay{z-index: 100000 !important;   }
+
+
+ .plastic_select, input[type="url"], input[type="text"], input[type="tel"], input[type="number"], input[type="email"], input[type="password"], select, textarea {
+border-radius:0px  !important;
+    font-size: 1.25rem;
+    line-height: normal;
+    padding: .75rem;
+    border: 0 !important;
+    max-width: 100%;
+    font-family:sans-serif;
+    margin: 0 0 .5rem;
+    border-bottom: 1px solid #ced4da !important;
+}
+
+ @media (max-width:845px){.text-sm {    color: #fff;   }
+ .ReactModal__Content{width:70% !important;}
+}
+
+@media (max-width:500px){.text-sm {    color: #fff;    font-size: 0.49rem !important;}
+ .ReactModal__Content{width:90% !important;}
+ .login-heading {    font-size: 0.6rem !important;}
+ label { font-size: 0.5rem;}
+}
+
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .fa {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .fa  { left:  0px;}
+.right-addon .fa { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+ .modal-header {    padding: 0.31rem;    border-bottom:0px solid #e9ecef !important;}
+ .modal-body {     padding: 0 !important;}
+ .effect-7 ~ .focus-border:before,
+.effect-7 ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 50%; width: 0; height: 1px; background-color: #3399FF; transition: 0.4s;}
+.effect-7 ~ .focus-border:after{top: auto; bottom: 0;}
+.effect-7 ~ .focus-border i:before,
+.effect-7 ~ .focus-border i:after{content: ""; position: absolute; top: 50%; left: 0; width: 1px; height: 0; background-color: #3399FF; transition: 0.6s;}
+.effect-7 ~ .focus-border i:after{left: auto; right: 0;}
+.effect-7:focus ~ .focus-border:before,
+.effect-7:focus ~ .focus-border:after{left: 0; width: 100%; transition: 0.4s;}
+.effect-7:focus ~ .focus-border i:before,
+.effect-7:focus ~ .focus-border i:after{top: 0; height: 100%; transition: 0.6s;}
+
+.form-group {    margin-bottom: 0.2rem !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .btnFacebook {
+  width: 368px;
+  height:40px;
+  border-radius: 4px;
+  background: #3b5998;
+  color:white;
+  border:0px transparent;
+  text-align: center;
+  margin-top:5px;
+  display: inline-block;
+}
+.btnGoogle {
+  margin-top:5px;
+  width: 368px;
+  height:40px;
+  border-radius: 4px;
+  background: ##ea4335;
+  color:white;
+  border:0px transparent;
+  text-align: center;
+}
+.btnFacebook:hover {
+  background: #3b5998;
+  opacity: 0.6;
+}
+.btnGoogle:hover {
+  background: #db3236;
+  opacity: 0.6;
+}
+
+@media only screen and (max-width : 399px) {
+  .btnFacebook,.btnGoogle{
+    width: 100%
+  }
+}

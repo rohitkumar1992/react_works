@@ -1,0 +1,10 @@
+.menu-title{
+  color:black !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 767px) {
+  nav.navbar.childnav .nav-link { padding: 10px 10px; }
+
+  body.headerfix nav.navbar.childnav .nav-link span { color:#fff !important; }
+}

@@ -1,0 +1,111 @@
+import React, { Component } from 'react';
+import {Link} from "react-router-dom";
+import axios from 'axios';
+import $ from 'jquery';
+import Select from 'react-select';
+import './form.css';
+import {VIDEO_TAGGING} from '../../../../url.js';
+import Loader from '../../../../component/content_loader/loader.js'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const priority=[{ value: '2', label: 'High' },
+{ value: '1', label: 'Medium' },
+{ value: '0', label: 'Low' }
+];
+const notification=[{ value: '0', label: 'Dont Notify Me' },
+{ value: '1', label: 'Notify Me on web' },
+{ value: '2', label: 'Notify Me through Mail' }
+]
+class VideoDescription extends Component {
+  state={
+    video_id:0,
+    selectedNotification:[],
+    selectedPriority:[],
+    uploadSelection:'',
+    loader:false
+  }
+  componentDidMount()
+  {
+    this.setState({video_id:this.props.match.params.id,uploadSelection:this.props.match.params.tag});
+  }
+  formSubmitHandler=(e)=>
+  {
+    e.preventDefault();
+        $('#error_msg').html('');
+    var priority=e.target.priority.value;
+    var notify=e.target.notification.value;
+    var user_id=localStorage.getItem('userid');
+    var tag=this.state.uploadSelection=="mylist"?"from_our_list":"new";
+      if(priority=='' || notify=='' )
+        {
+          $('#error_msg').html('All Options Must Be Filled');
+              return false;
+        }
+    this.setState({loader:true});
+    axios.post(VIDEO_TAGGING,
+      {
+        user_id:user_id,
+        tag:tag,
+        video_id:this.state.video_id,
+        priority:priority,
+        notify:notify,
+        price:'600',
+      }
+  )
+  .then(response=>{
+if(response.data.success=='1' && response.data.success==1)
+{
+toast("Adding To Queue")
+setTimeout(()=>this.props.history.push(`/dashboard/buyer/service/tagging/preview/${response.data.tagging_id}`),2000);                                                                                                            ;
+}
+  })
+  .catch(function (error) {
+    console.log(error);
+});
+  }
+priorityChange = (selectedOption) => {
+this.setState({ selectedPriority:selectedOption });
+}
+notificationChange = (selectedOption) => {
+this.setState({ selectedNotification:selectedOption });
+}
+  render() {
+    return (
+            <div>
+
+              <ToastContainer autoClose={2000}/>
+              {this.state.loader && <Loader />}
+                {this.state.loader==false && <div id="form_data">
+
+                        <center><h3>Tagging Description</h3></center>
+              <form  id="form_tag" action="javascript:" onSubmit={this.formSubmitHandler}>
+              <div class="col-lg-4 col-md-6 col-sm-10  col_tagging mt-5" style={{marginTop:'50px',marginLeft:'34%'}}>
+                        <center><span style={{color:'red'}} id="error_msg"></span></center>
+                     <label for="priority" style={{color:'black',textTransform:'uppercase'}}>Priority</label><Select
+                    value={this.state.selectedPriority}
+                    onChange={this.priorityChange}
+                    placeholder={'Select Priority'}
+                    options={priority}
+                    isMulti={false}
+                    name="priority"
+                    id="priority"
+                    />
+                    <label for="notification_div" style={{color:'black',textTransform:'uppercase',paddingTop:'30px'}}>Notification (optional)</label>
+                    <Select
+                       value={this.state.selectedNotification}
+                       onChange={this.notificationChange}
+                       placeholder={'Notification'}
+                       options={notification}
+                       isMulti={false}
+                       name="notification"
+                       id="notification_div"
+                       />
+                      <button type="submit" class="btn btn-lg btn-primary pull-right mt-5" id="save_button">Next</button>
+              </div>
+
+              </form></div>}
+            </div>
+        )
+}
+}
+export default VideoDescription;

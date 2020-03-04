@@ -1,0 +1,28 @@
+.caret
+{
+  color:rgb(218,57,40) !important;
+  font-size:18px !important;
+}
+#service_span_text{
+  font-size: 15px !important;
+  color:black !important;
+}
+
+ul.features_transcoding.home_list {
+    padding-left: 10px;
+}
+
+ul.features_transcoding.home_list li {
+    padding-bottom: 10px;
+    font-size: 13px !important;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #333 !important;
+}
+ul.features_transcoding.home_list li:after {
+    top: 9px;
+}
+
+ul.features_transcoding.home_list li #service_span_text {
+    color: #333 !important;
+}

@@ -1,0 +1,98 @@
+/* circle */
+
+
+
+.timeline {
+    position: relative;
+    float: right;
+    display: inline-block;
+    width:418px;
+}
+
+.right_bord_direction {
+    position: fixed;
+    top: 37%;
+    right: 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color:#0b68f5;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px;
+}
+
+
+.circle {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+
+.circle::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color:#0b68f5;
+  border: 4px solid #b7c4d2;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.left {
+  left: 0;
+}
+
+
+.c_right {
+  left: 50%;
+}
+
+
+.c_right::after {
+  left: -16px;
+}
+
+.content h2 {
+    color: #48494a;
+    text-align: left;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .timeline::after {
+  left: 31px;
+  }
+
+  .circle {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+ 
+  .circle::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  
+  .left::after, .c_right::after {
+  left: 15px;
+  }
+}

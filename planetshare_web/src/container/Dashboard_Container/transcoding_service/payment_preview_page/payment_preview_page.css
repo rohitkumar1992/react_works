@@ -1,0 +1,37 @@
+.payment_preview {  }
+.payment_preview .container { padding: 0px 15px; }
+.payment_preview .payment_table { margin: 0 auto; width: 500px; position: relative; }
+.payment_preview .profile-img { position: absolute; left: -160px; top: 0px; display: inline-block; }
+.payment_preview .table { display: table; margin: 0 auto; border-collapse: collapse;}
+.payment_preview .table_r { display: table-row; }
+.payment_preview .table_c { display: table-cell; width: 50%; padding: 10px 10px; vertical-align: middle; border: 1px solid #ddd; }
+.payment_preview .table_c:first-child label { font-weight: 600; }
+.payment_preview .table_c label { transform: none; margin-bottom: 0px; line-height: 20px !important; display: inline-block; float:left; width: 100%; }
+.payment_preview .table_c p { margin: 0px !important; line-height: 20px !important; font-size: 0.72rem !important; width: 100%; display: inline-block; }
+.payment_preview .table_c p td { padding: 0px !important; }
+.payment_preview .table_c .row { margin: 0px; }
+.payment_preview .table_c .row > div {  }
+.payment_preview .table_r:nth-child(odd) .table_c { background:#f1f1f1; }
+.payment_preview .buttons { width: 100%; overflow: hidden; text-align: center; }
+.payment_preview .buttons a { display: inline-block; margin-top: 20px; }
+.payment_preview .buttons a button { padding: 10px 20px; }
+.payment_preview .table_r.last .table_c { background:#090328; }
+.payment_preview .table_r.last .table_c label { color:#fff; font-size: 18px; font-weight: 600; }
+.payment_preview .table_r.last .table_c p { color:#fff; font-size: 18px !important; font-weight: 600; }
+
+
+@media (max-width: 991px) {
+  .payment_preview .preview_table { width: 100%; float:right; }
+  .payment_preview .profile-img { width: 20%; left: 0px; }
+  .payment_preview .table { width: 80%; float:right; }
+}
+
+
+@media (max-width: 567px) {
+  .payment_preview .profile-img { width: 160px; margin: 0 auto; position: relative; display: block; }
+  .payment_preview .payment_table{ width: 100%; }
+  .payment_preview .table { display: block; width: 100%; }
+  .payment_preview .table_r { display: block; width: 100%; }
+  .payment_preview .table_c:first-child label { font-size: 14px; }
+  .payment_preview .table_c { display: block; width: 100%; overflow: hidden;}
+}

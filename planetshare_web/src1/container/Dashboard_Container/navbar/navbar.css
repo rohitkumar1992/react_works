@@ -1,0 +1,7 @@
+span.nav-link.text-white.modal_login_button { border:1px solid rgba(202,52,100,1); background: linear-gradient(90deg, rgba(202,52,100,1) 15%, rgba(219,50,79,1) 100%); transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out; }
+span.nav-link.text-white.modal_login_button:hover { background:#000; border:1px solid rgba(202,52,100,1); transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out; }
+ul.nav.navigation ul.dropdown-menu li a { color:#000; }
+ul.nav.navigation ul.dropdown-menu li:hover a { background:#333; color:#fff; }
+
+.nav-dropdown.navbar-right .dropdown-menu a.nav-link { color:#000; }
+.nav-dropdown.navbar-right .dropdown-menu li:hover a.nav-link { background:#333; color:#fff; }

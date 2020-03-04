@@ -1,0 +1,80 @@
+#input_text{
+border: 1px solid gray !important;
+padding: 1px;
+
+}
+th{
+  color:gray !important;
+
+  padding:14px!important;
+  font-weight: 400;
+}
+td{
+  color:rgba(0,0,0,0.6) !important;
+  text-align: center;
+}
+.table_content{
+  background-color:white!important;
+}
+.table_img
+{
+  width:50px;
+  height:34px;
+  border-radius:5%;
+}
+@media screen and (max-width: 760px) {
+  .pagination_new {
+    position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }}
+
+  .show_entity {
+    position: relative;
+  float: left;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  }
+  #input_text{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+
+
+  }
+  #select_box{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+
+
+  }
+.width_set{text-align: inherit;}
+
+.table td, .table th {
+  padding-left: 14px!important;
+  vertical-align: top;
+  border-top: 1px solid white;
+}
+
+/*add css by rohit kumar*/
+.dubbing_myorder {  }
+.dubbing_myorder .container { padding: 0px 15px; }
+.dubbing_myorder table { width: 100%; margin-top: 30px; }
+.dubbing_myorder table thead th,
+.dubbing_myorder table tbody td { white-space: normal; padding: 5px 10px; text-align: center; border: 1px solid #ddd; vertical-align: middle;}
+.dubbing_myorder table thead th { color:#fff !important; font-size: 18px; font-weight: 600; background:#1b2e42; }
+.dubbing_myorder table tbody td { line-height: 20px; padding: 10px 10px; }
+.dubbing_myorder table tbody tr:nth-child(even) td { background:#f1f1f1; }
+.dubbing_myorder table thead th:nth-child(2) { text-align: left; }
+.dubbing_myorder table tbody td:nth-child(2) { text-align: left; }
+.dubbing_myorder table tbody td div i { display: inline-block; width: auto !important; padding: 5px; }

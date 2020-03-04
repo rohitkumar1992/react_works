@@ -1,0 +1,68 @@
+.industry_services ul.features_transcoding {
+    padding-left: 0;
+}
+.industry_services .shadow-top0 {box-shadow: none !important;}
+.industry_services  image.is-revealing.ml-7 {
+    box-shadow: 1px 1px 7px 1px #333;
+}
+.industry_services .is-revealing {
+    min-width: 550px;
+	    min-height: 450px;
+    max-height: 550px;
+
+}
+
+
+
+.feature-extended-image.is-revealing.ml-7 {
+      
+    outline-offset: -10px;
+}
+
+.feature.ser_box {
+    width: 350px;
+    max-width: 355px;}
+	
+.industry_services button.btn.btn-warning.btn-banner.btn-blue-features.box-shadow{padding: 12px 30px;transition:0.5s;}
+.industry_services button.btn.btn-warning.btn-banner.btn-blue-features.box-shadow:hover{outline: 1px solid #007bff;
+    outline-offset: -5px;
+    background: #fff !important;
+    color: #007bff !important;}
+
+ h4.section-title{position: relative;
+	    margin-bottom:30px;}
+
+ h4.section-title:after {
+    position: absolute;
+    width:100px;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    right: 0;
+    margin: auto;
+    border-bottom: 2px solid #0c78ce;}
+	
+	.owl-carousel .owl-item img { width: auto !important;}
+	
+	.home_services .owl-prev span ,.home_services .owl-next span{
+    position: relative;
+    top: -2px;
+}
+	.home_services .owl-carousel .owl-nav button.owl-prev, .home_services .owl-carousel .owl-nav button.owl-next {
+    background: none;
+	font-size:22px !important;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    background: #1c8af3;
+    border-radius: 50%;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+    text-align: center;
+    margin-top: -5px;
+	color:#fff;
+
+	
+}

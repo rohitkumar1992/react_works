@@ -1,0 +1,141 @@
+.add-category{
+  padding:10px !important;
+}
+.main{
+    background-color:  #e4f0f3  !important;
+}
+.total-records{
+  margin-top: -10px !important;
+  margin-left:-50px !important;
+}
+
+.data_tables{
+  width:100% !important;
+  margin-left:20px !important;
+  margin-top:20px !important;
+ font-family: "Times New Roman", Times, serif !important;
+}
+.category{
+  padding:20px !important;
+  margin-top:-30px;
+}
+.addcategory_inside_box{
+  width:100% !important;
+  padding:15px;
+}
+#edit_name,#edit_status{
+  margin-left:50px;
+  margin-top:10px;
+}
+#edit_icon,#edit_date{
+  margin-left:60px;
+  margin-top:10px;
+}
+#edit_url{
+  margin-left:68px;
+  margin-top:10px;
+}
+#edit_button
+{
+  margin-top:30px;
+  background-color:black;
+  color:white;
+  border:none;
+  margin-left:50px;
+}
+
+.user_modal
+{
+width:1000px !important;
+height:600px !important;
+}
+.heading{
+  text-align:center;
+  margin-top:10px;
+  color:white;
+}
+.active_button
+{
+  color:white;
+  border:none;
+padding:5px !important;
+font-size:10px !important;
+font-weight:bold !important;
+}
+.inactive_button
+{
+  color:white;
+  border:none;
+  padding:5px !important;
+  font-size:10px !important;
+font-weight:bold !important;
+}
+.edit_table
+{
+  margin-left:50px !important;
+  margin-top:30px;
+}
+
+#user_root_container{
+  margin-top:50px !important;
+  margin-top:0px !important;
+}
+#user_container1
+{
+  padding:10px !important;
+  margin-left:-50px !important;
+  margin-top:-20px !important;
+}
+.user-edit-form{
+  margin-left:50px !important;
+  margin-top:20px !important;
+  color:black !important;
+}
+.radio
+{
+    padding:6px;
+    margin:10px;
+
+}
+#drop
+{
+    width:380px;
+    margin:10px;
+    padding:4px;
+   border:1px solid grey;
+    color:black;
+    background-color:white;
+}
+select
+{
+ -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.edit_button
+{
+margin-top:-25px;
+color:white;
+padding:5px;
+width:80px;
+border:1px solid black;;
+margin-left:580px !important;
+position:absolute !important;
+}
+.label
+{
+  color:black !important;
+}
+#edit_form_header
+{
+margin-left:0px !important;
+}
+#edit_form_header_text
+{
+  background-color: #09192a !important;
+  color:white !important;
+}
+.edit_head_tag
+{
+  margin-top:15px !important;
+}

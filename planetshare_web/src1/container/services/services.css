@@ -1,0 +1,89 @@
+.home_services .feature-inner{ 
+  box-shadow: 0px 0px 30px 3px #ccc;
+}
+
+.home_services .feature-inner .feature-icon{margin-top: -20px !important;}
+
+.feature.ser_box {
+    width: 305px;
+    max-width: 300px;
+    height: 290px;
+}
+
+.home_services .feature-inner:hover {
+    background: #0c78ce;
+  
+}
+
+.home_services .feature-inner:hover p ,.home_services .feature-inner:hover h6.feature-title{
+    color: #fff;
+  
+}
+.home_services .feature-inner:hover {
+    background: #348ace;
+	transition:0.5s;
+    border-radius: 41px 0px 50px 0px;
+}
+
+.feature.ser_box p.text-sm {
+    padding: 0 10px;
+    text-align: justify;
+	font-size:13px ;
+	line-height:1.5;
+}
+
+.home_services h4 {
+    position: relative;
+	    margin-bottom:65px !important;
+		margin-top:30px !important;
+}
+
+.home_services h4:after {
+    position: absolute;
+    width:60px;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    right: 0;
+    margin: auto;
+    border-bottom: 2px solid #0c78ce;}
+
+.home_services h1 {position: relative;
+    top: -60px;
+    font-size: 13px;
+    color: #0c78ce;
+    display: block;
+    max-width: 110px;
+    margin: auto;
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid #007bff;
+	transition:0.5s;
+}
+.home_services :hover h1{
+    color: #000;
+	border-color:#00;
+	
+  
+}
+
+.home_services h1:hover {
+    color: #333;
+	border-color:#333;
+  
+}
+.owl-carousel .owl-item img 
+{ 
+  width:60% !important; 
+} 
+.owl-next,.owl-prev{ 
+  font-size: 50px !important; 
+} 
+.owl-theme .owl-nav 
+{ 
+  margin-top:0px !important; 
+} 
+
+.box_crowsel .feature.ser_box {
+    width: 325px;
+}

@@ -1,0 +1,18 @@
+  .price_box{
+  width: 38%!important;
+  border: 1px solid !important;
+  padding: 5px!important;
+  font-size: 14px!important;
+}
+
+::placeholder { /* Firefox, Chrome, Opera */
+    color: blue;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: orange;
+}

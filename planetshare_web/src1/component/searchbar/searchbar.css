@@ -1,0 +1,12 @@
+.search_bar { width: 100%; }
+#debug_searchbar { position: relative; width: 250px; float:right; transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out; }
+#debug_searchbar:focus, #debug_searchbar:hover  { width: 100%; transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out; }
+#debug_searchbar input[type="text"] { font-size: 16px; position: relative; padding: 7px 45px 7px 10px !important; height: 40px !important; line-height: 26px; border-radius: 10px !important; display: inline-block; width: 100%; border: 1px solid #ddd !important; }
+#debug_searchbar input[type="text"]:focus { width: 100%; }
+#debug_searchbar span.fa { cursor: pointer; display: inline-block; right: 0px; border-top-right-radius:10px; border-bottom-right-radius: 10px; width: 40px; height: 40px; margin: 0px !important; text-align: center; line-height: 40px; padding: 0px; color:#fff; background:rgb(202, 52, 100); transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out; }
+#debug_searchbar span.fa:hover { background:#000; transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out;}
+#debug_searchbar input[type="text"]::placeholder {color: #333 !important; font-size: 12px !important;}
+#debug_searchbar input[type="text"]::-webkit-input-placeholder { color: #ccc;}
+#debug_searchbar input[type="text"]::-moz-placeholder {color: #ccc;}
+#debug_searchbar input[type="text"]:-ms-input-placeholder {color: #ccc;}
+#debug_searchbar input[type="text"]:-moz-placeholder {color: #ccc;}

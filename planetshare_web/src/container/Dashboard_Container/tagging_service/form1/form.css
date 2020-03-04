@@ -1,0 +1,17 @@
+#notification_div{color: black!important; font-size: 14px!important;}
+
+#priority{color: black!important; font-size: 14px!important;}
+.css-bg1rzq-control{font-size: 14px!important;}
+#save_button{
+    font-size: 20px!important;
+  border-radius: 5px!important;
+}
+
+#width{border: 1px solid #ced4da !important;}
+.col_tagging{
+  border: 1px solid;
+box-shadow: 0 4px 7px rgba(32,41,50,0.52);
+padding: 40px;
+padding-bottom:  150px!important;
+padding-top: 50px;
+}

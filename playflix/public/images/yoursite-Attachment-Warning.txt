@@ -1,0 +1,21 @@
+This is a message from the MailScanner E-Mail Virus Protection Service
+----------------------------------------------------------------------
+The original e-mail attachment "favicon.zip"
+is on the list of unacceptable attachments for this site and has been
+replaced by this warning message.
+
+If you wish to receive a copy of the original attachment, please
+e-mail helpdesk and include the whole of this message
+in your request. Alternatively, you can call them, with
+the contents of this message to hand when you call.
+
+At Mon Nov 25 17:58:57 2019 the virus scanner said:
+   MailScanner: Possible buffer overflow in Windows (playflixfav.ico)
+
+Note to Help Desk: Look on The yoursite (mail2.planetc.net) MailScanner in /var/spool/MailScanner/quarantine/20191125 (message xAPCSoUL027072).
+-- 
+Postmaster
+Your Organisation Name Here
+www.your-organisation.com
+
+

@@ -1,0 +1,127 @@
+
+  .price_box{
+  width: 38%!important;
+  border: 1px solid black !important;
+  padding: 5px!important;
+  font-size: 14px!important;
+}
+
+::placeholder { /* Firefox, Chrome, Opera */
+    color: blue;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: orange;
+}
+
+
+/*14-06-2019 */
+.langauge_sec #lc{ background: #0c78ce;color: #fff; }
+.langauge_sec #lc td{color: #fff;padding:15px; }
+.select_lang {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.yy input::placeholder{
+	color:#696363 !important;
+	font-size:12px !important;
+}
+
+.yy input[type="number"] {
+    text-align: center;
+    margin: auto;
+    background: #e2e2e2;
+    margin-top: -10px;
+    padding: 10px !important;
+}
+
+
+button#add-more {
+    padding: 8px 25px;
+    position: absolute;
+    left:0;
+    top: 20px;
+    border-radius: 0;
+    outline: 1px solid #fff;
+    outline-offset: -5px;
+}
+
+
+.remove_section {
+    position:relative;
+ 	left:195%;
+    background: none !important;
+    border: none;
+        bottom: -54px;
+}
+
+.remove_section i.fa.fa-times {
+  color: #f00;
+    font-size: 16px;
+    outline: none;
+    font-weight: normal;
+    background: none !important;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    background: #ddd!important;
+    text-align: center;
+}
+
+.select_lang {
+	font-size:12px !important;
+	border:none !important;
+	color:#333 !important;
+	background-color: #e2e2e2 !important;
+}
+
+.vender_next_btn {
+    position: absolute;
+       right: 34%;
+    padding: 5px 30px !important;
+    font-size: 14px !important;
+    bottom: -40px;
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+    transition: 0.6s;
+}
+
+
+
+
+
+@media (min-width: 678px){
+
+.yy input[type="number"] {
+      width:150px !important;
+}
+
+
+.select_lang {
+    width: 160px;
+    padding: 12px 26px;
+}
+
+.vender_next_btn {
+    right: 34%;
+}
+
+.remove_section i.fa.fa-times{    height:18px;  width:18px;  line-height:18px;}
+.remove_section {position:relative;left:198%; top:48px;}
+
+
+}
+
+@media(min-width: 678px)and (max-width: 992px){
+
+.vender_next_btn {  right: 25%;}
+.remove_section {position:relative;left:198%; top:48px;}
+
+}
