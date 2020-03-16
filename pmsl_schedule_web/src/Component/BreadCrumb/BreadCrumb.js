@@ -10,7 +10,7 @@ const BreadCrumb =(props)=>{
   return(
     <div class="content_header">
       <h2>{props.heading}</h2>
-      <nav aria-label="breadcrumb">
+      {/*<nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="Javascript:">
@@ -19,7 +19,7 @@ const BreadCrumb =(props)=>{
           </li>
           <li class="breadcrumb-item active" aria-current="page">{props.heading}</li>
         </ol>
-      </nav>
+      </nav>*/}
     </div>
   )
 }

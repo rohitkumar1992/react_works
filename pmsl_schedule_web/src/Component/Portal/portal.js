@@ -9,7 +9,15 @@ import "react-datepicker/dist/react-datepicker.css";
 import InputBox from '../InputComponent/InputComponent';
 import {Dropdown} from 'primereact/dropdown';
 import MultiSelect from '../multiselect.js'
-import DropDown from '../dropdown.js'
+import DropDown from '../dropdown.js';
+import CSVReader from "react-csv-reader";
+import Moment from 'react-moment';
+const papaparseOptions = {
+  header: true,
+  dynamicTyping: true,
+  skipEmptyLines: true,
+  transformHeader: header => header.toLowerCase().replace(/\W/g, "_")
+};
 const modalRoot=document.getElementById('portal_modal');
 
 const Modal =(props)=>{
@@ -19,6 +27,35 @@ const Modal =(props)=>{
   const [channelsSelect,changeChannelsSelect]=useState([]);
   const [employeeSelect,changeEmployeeSelect]=useState(null);
   const {portalData}=props;
+  const [libraryCsvData,changeLibraryCsvData]=useState([])
+  const [commercialCsvData,changeCommercialCsvData]=useState([])
+  const [showTable,changeShowTable]=useState(false)
+  const uploadLibraryCsv = (data, fileName) =>
+  {
+    if(data[0].content_id==null || data[0].name==null || data[0].short_name==null || data[0].category_id==null || data[0].duration==null || data[0].channel_id==null || data[0].rights==null)
+    {
+      alert('Wrong');
+      return false;
+    }
+    else {
+    const newArr1 = data.map(v => ({...v, status: 1}));
+    changeLibraryCsvData(newArr1);
+    changeShowTable(true)
+  }
+}
+const uploadCommercialCsv = (data, fileName) =>
+{
+  if(data[0].commercial_id==null || data[0].name==null || data[0].short_name==null || data[0].duration==null || data[0].rights==null)
+  {
+    alert('Wrong');
+    return false;
+  }
+  else {
+  const newArr1 = data.map(v => ({...v, status: 1}));
+  changeCommercialCsvData(newArr1);
+  changeShowTable(true)
+}
+}
   return ReactDOM.createPortal(
       <div className="modal" style={{
         backgroundColor:'rgba(0,0,0,0.6)'
@@ -146,7 +183,7 @@ const Modal =(props)=>{
             </form>
           </div>}
             <span id="error_msg" style={{color:'red'}}></span>
-            {props.modal_loading && <Loader message={props.modal_loading_msg}/>}
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
           </div>
         </div>
       </div>}
@@ -202,7 +239,7 @@ const Modal =(props)=>{
             </ul>
           </div>}
             <span id="error_msg" style={{color:'red'}}></span>
-            {props.modal_loading && <Loader message={props.modal_loading_msg}/>}
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
           </div>
         </div>
       </div>}
@@ -244,7 +281,7 @@ const Modal =(props)=>{
             </form>
           </div>}
             <span id="error_msg" style={{color:'red'}}></span>
-            {props.modal_loading && <Loader message={props.modal_loading_msg}/>}
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
           </div>
         </div>
       </div>}
@@ -267,7 +304,7 @@ const Modal =(props)=>{
           </ul>
           </div>}
             <span id="error_msg" style={{color:'red'}}></span>
-            {props.modal_loading && <Loader message={props.modal_loading_msg}/>}
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
           </div>
         </div>
       </div>}
@@ -351,7 +388,7 @@ const Modal =(props)=>{
             })}
             </ul></div>}
             <span id="error_msg" style={{color:'red'}}>{props.auth_err}</span>
-            {props.modal_loading && <Loader message={props.modal_loading_msg}/>}
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
           </div>
         </div>
       </div>}
@@ -439,7 +476,262 @@ const Modal =(props)=>{
             </div>
           </div>}
             <span id="error_msg" style={{color:'red'}}></span>
-            {props.modal_loading && <Loader message={props.modal_loading_msg}/>}
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
+          </div>
+        </div>
+      </div>}
+    {(props.modalType=="add_category") && <div class="modal-dialog small_modal" role="document" style={{width:500}}>
+        <div class="modal-content">
+          <div class="modal-body">
+          <button type="button" class="close" onClick={()=>{props.closeModal();$("#portal_modal").removeClass("show");$("body").removeClass("bfix")}}>&times;</button>
+          {!props.modal_loading && <div class="emp_form">
+            <form id="create_category_form"  onSubmit={props.createCategory}>
+              <h3>Create Category</h3>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="inputbox">
+                    <label>Name<sup>*</sup></label>
+                    <input type="text" placeholder="Category Name" name="name" required/>
+                  </div>
+                </div>
+              </div>
+              {/*<div class="error_box"><ul><li><p>The license rights field is required.</p></li></ul></div>*/}
+              <div class="buttons">
+                <button type="submit" class="btndefault">Save</button>
+                <button type="button" class="btndefault" onClick={()=>{$('#create_category_form').trigger("reset")}}>Clear</button>
+              </div>
+            </form>
+          </div>}
+            <span id="error_msg" style={{color:'red'}}></span>
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
+          </div>
+        </div>
+      </div>}
+    {(props.modalType=="add_single_library") && <div class="modal-dialog sm_modal" role="document" style={{width:500}}>
+        <div class="modal-content">
+          <div class="modal-body">
+          <button type="button" class="close" onClick={()=>{props.closeModal();$("#portal_modal").removeClass("show");$("body").removeClass("bfix")}}>&times;</button>
+          {!props.modal_loading && <div class="emp_form">
+            <form id="add_single_library_form"  onSubmit={props.createSingleLibrary}>
+              <h3>Library Content</h3>
+              <div class="row">
+              <div class="col-md-6">
+                <div class="inputbox">
+                  <label>Content Id<sup>*</sup></label>
+                  <input type="text" placeholder="Content Id" name="content_id" required/>
+                </div>
+              </div>
+                <div class="col-md-6">
+                  <div class="inputbox">
+                    <label>Name<sup>*</sup></label>
+                    <input type="text" placeholder="Name" name="name" required/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="inputbox">
+                    <label>Short Name<sup>*</sup></label>
+                    <input type="text" placeholder="Code" name="short_name" required/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                <div class="inputbox">
+                  <label>Duration<sup>*</sup></label>
+                  <input type="text" placeholder="Duration" name="duration" required/>
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="inputbox">
+                  <label>Category Id<sup>*</sup></label>
+                  <input type="text" placeholder="Category Id" name="category_id" required/>
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="inputbox">
+                  <label>Channel Id<sup>*</sup></label>
+                  <input type="text" placeholder="Channel Id" name="channel_id" required/>
+                </div>
+                </div>
+                <div class="col-md-12">
+                <div class="inputbox">
+                  <label>Rights<sup>*</sup></label>
+                  <input type="text" placeholder="Rights" name="rights" required/>
+                </div>
+                </div>
+              </div>
+              {/*<div class="error_box"><ul><li><p>The license rights field is required.</p></li></ul></div>*/}
+              <div class="buttons">
+                <button type="submit" class="btndefault">Save</button>
+                <button type="button" class="btndefault" onClick={()=>{$('#add_single_library_form').trigger("reset")}}>Clear</button>
+              </div>
+            </form>
+          </div>}
+            <span id="error_msg" style={{color:'red'}}></span>
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
+          </div>
+        </div>
+      </div>}
+    {(props.modalType=="add_csv_library") && <div class="modal-dialog" role="document" style={{width:500}}>
+        <div class="modal-content">
+          <div class="modal-body">
+          <button type="button" class="close" onClick={()=>{props.closeModal();$("#portal_modal").removeClass("show");$("body").removeClass("bfix")}}>&times;</button>
+          {!props.modal_loading && <div class="emp_form">
+          <div className="upl_box">
+            <label>
+              <CSVReader
+                cssClass="react-csv-input"
+                onFileLoaded={uploadLibraryCsv}
+                parserOptions={papaparseOptions}
+              />
+              <div class="inf">
+                <a href="javascript:" class="btn s_btn">
+                    Upload CSV
+                    <span><i class="fas fa-upload" aria-hidden="true"></i></span>
+                </a>
+              </div>
+            </label>
+          </div>
+          <div class="nocsvcont">
+            <p>No csv data here</p>
+          </div>
+          {showTable &&<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Content Id</th>
+                  <th>Name</th>
+                  <th>Short Name</th>
+                  <th>Category Id</th>
+                  <th>Channel Id</th>
+                  <th>Rights</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+              {libraryCsvData.map((res,key)=>{
+                return(<tr key={key}><td className="tbl_l">{res.content_id}</td>
+                          <td>{res.name}</td>
+                          <td>{res.short_name}</td>
+                          <td>{res.category_id}</td>
+                          <td>{res.channel_id}</td>
+                          <td>{res.rights}</td>
+                          <td><Moment  element="span"  format="HH:mm" add={{hours:5.5}}>{res.duration}</Moment></td>
+                      </tr>)
+              })}
+              </tbody>
+            </table>
+            <div class="buttons">
+              <button type="button" class="btndefault" onClick={()=>props.createCsvLibrary(libraryCsvData)}>Save</button>
+            </div>
+            </div>}
+          </div>}
+            <span id="error_msg" style={{color:'red'}}></span>
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
+          </div>
+        </div>
+      </div>}
+    {(props.modalType=="add_single_commercial") && <div class="modal-dialog sm_modal" role="document" style={{width:500}}>
+        <div class="modal-content">
+          <div class="modal-body">
+          <button type="button" class="close" onClick={()=>{props.closeModal();$("#portal_modal").removeClass("show");$("body").removeClass("bfix")}}>&times;</button>
+          {!props.modal_loading && <div class="emp_form">
+            <form id="add_single_commercial_form"  onSubmit={props.createSingleCommercial}>
+              <h3>Library Content</h3>
+              <div class="row">
+              <div class="col-md-6">
+                <div class="inputbox">
+                  <label>Commercial Id<sup>*</sup></label>
+                  <input type="text" placeholder="Content Id" name="commercial_id" required/>
+                </div>
+              </div>
+                <div class="col-md-6">
+                  <div class="inputbox">
+                    <label>Name<sup>*</sup></label>
+                    <input type="text" placeholder="Name" name="name" required/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="inputbox">
+                    <label>Short Name<sup>*</sup></label>
+                    <input type="text" placeholder="Code" name="short_name" required/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                <div class="inputbox">
+                  <label>Duration<sup>*</sup></label>
+                  <input type="text" placeholder="Duration" name="duration" required/>
+                </div>
+                </div>
+                <div class="col-md-12">
+                <div class="inputbox">
+                  <label>Rights<sup>*</sup></label>
+                  <input type="text" placeholder="Rights" name="rights" required/>
+                </div>
+                </div>
+              </div>
+              {/*<div class="error_box"><ul><li><p>The license rights field is required.</p></li></ul></div>*/}
+              <div class="buttons">
+                <button type="submit" class="btndefault">Save</button>
+                <button type="button" class="btndefault" onClick={()=>{$('#add_single_commercial_form').trigger("reset")}}>Clear</button>
+              </div>
+            </form>
+          </div>}
+            <span id="error_msg" style={{color:'red'}}></span>
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
+          </div>
+        </div>
+      </div>}
+    {(props.modalType=="add_csv_commercial") && <div class="modal-dialog" role="document" style={{width:500}}>
+        <div class="modal-content">
+          <div class="modal-body">
+          <button type="button" class="close" onClick={()=>{props.closeModal();$("#portal_modal").removeClass("show");$("body").removeClass("bfix")}}>&times;</button>
+          {!props.modal_loading && <div class="emp_form">
+          <div className="upl_box">
+            <label>
+              <CSVReader
+                cssClass="react-csv-input"
+                onFileLoaded={uploadCommercialCsv}
+                parserOptions={papaparseOptions}
+              />
+              <div class="inf">
+                <a href="javascript:" class="btn s_btn">
+                    Upload CSV
+                    <span><i class="fas fa-upload" aria-hidden="true"></i></span>
+                </a>
+              </div>
+            </label>
+          </div>
+          <div class="nocsvcont">
+            <p>No csv data here</p>
+          </div>
+          {showTable &&<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Commercial Id</th>
+                  <th>Name</th>
+                  <th>Short Name</th>
+                  <th>Rights</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+              {commercialCsvData.map((res,key)=>{
+                return(<tr key={key}><td className="tbl_l">{res.commercial_id}</td>
+                          <td>{res.name}</td>
+                          <td>{res.short_name}</td>
+                          <td>{res.rights}</td>
+                          <td><Moment  element="span"  format="HH:mm" add={{hours:5.5}}>{res.duration}</Moment></td>
+                      </tr>)
+              })}
+              </tbody>
+            </table>
+            <div class="buttons">
+              <button type="button" class="btndefault" onClick={()=>props.createCsvCommercial(commercialCsvData)}>Save</button>
+            </div>
+            </div>}
+          </div>}
+            <span id="error_msg" style={{color:'red'}}></span>
+            {props.modal_loading && <Loader message={props.loading_msg}/>}
           </div>
         </div>
       </div>}

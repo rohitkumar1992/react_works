@@ -15,6 +15,13 @@ export const EMPLOYEEDATABYID=base_url+"/getEmployeeById";
 export const LOGINLIST=base_url+"/getLoginList";
 export const LOGINDATABYID=base_url+"/getLoginById";
 export const CREATEELOGINUSER=base_url+"/create/login";
+export const CREATECATEGORY=base_url+"/createCategory"
+export const CATEGORYLIST=base_url+"/getCategoryList"
+export const CATEGORYDATABYID=base_url+"/getCategoryById"
+export const INSERTLIBRARY=base_url+"/insertLibrary"
+export const GETLIBRARY=base_url+"/getLibraryData"
+export const INSERTCOMMERCIAL=base_url+"/insertCommercial"
+export const GETCOMMERCIAL=base_url+"/getCommercialData"
 export const USERID=localStorage.getItem('user_id')==null?0:localStorage.getItem('user_id');
 export const TOKEN=localStorage.getItem('pmsl_token');
 // var fingerprint = new Fingerprint().get();

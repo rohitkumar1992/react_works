@@ -94,9 +94,9 @@ class LoginMaster extends React.Component{
         }
         else if(res.data.success==1)
         {
-          this.setState({modal_loading_msg:"Saving",modal_loading:true},function()
+          this.setState({modal_loading_msg:"Creating User",modal_loading:true},function()
         {
-          setTimeout(()=>{this.setState({modal_loading_msg:"Saving",modal_loading:true});
+          setTimeout(()=>{this.setState({modal_loading_msg:"",modal_loading:false});
           $("#portal_modal").removeClass("show");$("body").removeClass("bfix");
           this.getData(1,'');
         },1000)
@@ -159,7 +159,7 @@ class LoginMaster extends React.Component{
           <div class="buttons">
             <a class="btn s_btn" href="Javascript:" onClick={()=>{this.setState({modal_type:"login_master",open_portal:true});$("#portal_modal").addClass("show");$("body").addClass("bfix")}}>Add User <span><i class="fas fa-plus"></i></span></a>
           </div>
-          <SearchComponent getData={this.getData} currentPage={this.state.currentPage}/>
+          <SearchComponent getData={this.getData} currentPage={this.state.currentPage} placeholder="Search User"/>
         </div>
         <div class="table-responsive">
           <table class="table table-striped">

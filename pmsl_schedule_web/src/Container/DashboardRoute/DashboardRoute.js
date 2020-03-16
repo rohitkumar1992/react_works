@@ -6,7 +6,8 @@ import Home from '../Admin/AdminHome'
 import routes from './routes';
 class App extends Component {
   state={sidebar:[{"name":"Employee Master","url":"/dashboard/admin/employee_master",'icon':"fas menu_icon fa-user-tie"},{"name":"Channel Master","url":"/dashboard/admin/channel_master","icon":"fas menu_icon fa-dice-d6"},
-  {"name":"User Login Master","url":"/dashboard/admin/user_login_master",'icon':"fas menu_icon fa-sign-in-alt"},{"name":"Password Change","url":"/dashboard/admin/password_change",'icon':"fas menu_icon fa-key"}]}
+  {"name":"User Login Master","url":"/dashboard/admin/user_login_master",'icon':"fas menu_icon fa-sign-in-alt"},{"name":"Library","url":"/dashboard/admin/library",'icon':"fas menu_icon fa-book-reader"},
+{"name":"Commercial","url":"/dashboard/admin/commercial",'icon':"fas menu_icon fa-building"}]}
   // static getDerivedStateFromProps(props,state)
   // {
   //   console.log('hi');

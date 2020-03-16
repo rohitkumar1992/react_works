@@ -1,5 +1,5 @@
 import React from 'react';
-import {LOGIN,TAG,TOKEN,CHANNELLIST,USERID,HEADER,CHANGE_STATUS,CREATECHANNEL,CHANNELDATABYID,toUpperCaseFilter} from '../../url.js';
+import {LOGIN,TAG,TOKEN,USERID,HEADER,CHANGE_STATUS,CREATECATEGORY,CATEGORYLIST,CATEGORYDATABYID,toUpperCaseFilter} from '../../url.js';
 import Pagination from "react-js-pagination";
 import $ from 'jquery';
 import axios from 'axios';
@@ -8,14 +8,15 @@ import SearchComponent from '../../Component/SearchComponent/SearchComponent'
 import BreadCrumb from '../../Component/BreadCrumb/BreadCrumb'
 import Portal from '../../Component/Portal/portal';
 import Moment from 'react-moment';
-class ChannelMaster extends React.Component{
-  state={modal_loading:false,open_portal:false,auth_err:'',modal_loading_msg:'',portalData:[],modal_type:'',isLoading:false,employeeList:[],currentPage:1,total:1,itemsCountPerPage:10,pageRangeDisplayed:3}
+
+class Category extends React.Component{
+  state={modal_loading:false,open_portal:false,auth_err:'',modal_loading_msg:'',portalData:[],modal_type:'',isLoading:false,categoryList:[],currentPage:1,total:1,itemsCountPerPage:10,pageRangeDisplayed:3}
   componentDidMount()
   {
     this.getData(1,'');
   }
   getData=(page,keyword)=>{
-    axios.post(`${CHANNELLIST}?page=${page}`,{
+    axios.post(`${CATEGORYLIST}?page=${page}`,{
       'tag':'dash',
       'limit':this.state.itemsCountPerPage,
       'searchKeyword':keyword,
@@ -24,7 +25,7 @@ class ChannelMaster extends React.Component{
         if(res.data.success==1)
         {
           var response=res.data.data;
-          this.setState({currentPage:response.current_page,employeeList:response.data,total:response.total});
+          this.setState({currentPage:response.current_page,categoryList:response.data,total:response.total});
           setTimeout(()=>this.setState({isLoading:true}),1000)
         }
     }).catch((error)=>{
@@ -60,17 +61,13 @@ class ChannelMaster extends React.Component{
     }).catch((error)=>{
   });
   }
-  createChannel=(e)=>{
+  createCategory=(e)=>{
     e.preventDefault();
     var name=e.target.name.value.trim();
-    var short_name=e.target.short_name.value.trim();
-    var location=e.target.location.value.trim();
-    axios.post(CREATECHANNEL,
+    axios.post(CREATECATEGORY,
       {
         user_id:USERID,
-        channel_name:name,
-        short_name:short_name,
-        location:location,
+        cat_name:name,
         tag:TAG
       },HEADER).then((res)=>{
         if(res.data.success==3)
@@ -79,7 +76,7 @@ class ChannelMaster extends React.Component{
         }
         else if(res.data.success==1)
         {
-          this.setState({modal_loading_msg:"Creating Channel",modal_loading:true},function()
+          this.setState({modal_loading_msg:"Creating Category",modal_loading:true},function()
         {
           setTimeout(()=>{this.setState({modal_loading_msg:"",modal_loading:false});
           $("#portal_modal").removeClass("show");$("body").removeClass("bfix");
@@ -94,26 +91,24 @@ class ChannelMaster extends React.Component{
 
     })
   }
-  getChannelData=(Id)=>{
-      axios.post(CHANNELDATABYID,{
-        'tag':TAG,
-        'id':Id,
-      },HEADER).then((res)=>{
-          if(res.data.success==1)
-          {
-            this.setState({modal_type:"channel_master_detail",open_portal:true,portalData:res.data.data});$("#portal_modal").addClass("show");$("body").addClass("bfix")
-          }
-      }).catch((error)=>{
-    });
-  }
+  // getChannelData=(Id)=>{
+  //     axios.post(CATEGORYDATABYID,{
+  //       'tag':TAG,
+  //       'id':Id,
+  //     },HEADER).then((res)=>{
+  //         if(res.data.success==1)
+  //         {
+  //           this.setState({modal_type:"channel_master_detail",open_portal:true,portalData:res.data.data});$("#portal_modal").addClass("show");$("body").addClass("bfix")
+  //         }
+  //     }).catch((error)=>{
+  //   });
+  // }
   render()
   {
-    const {open_portal,auth_err,employeeList,isLoading,total_pages,modal_loading_msg,modal_loading,modal_type}=this.state;
-    const tableContent=(employeeList.length >0?employeeList.map((res,key)=>{
-      return(<tr key={key}><td className="tbl_l"  onClick={()=>this.getChannelData(res.id)}>{res.Channelid}</td>
-                <td>{res.channel_name}</td>
-                <td>{res.short_name}</td>
-                <td>{res.location}</td>
+    const {open_portal,auth_err,categoryList,isLoading,total_pages,modal_loading_msg,modal_loading,modal_type}=this.state;
+    const tableContent=(categoryList.length >0?categoryList.map((res,key)=>{
+      return(<tr key={key}><td className="tbl_l" onClick={()=>this.props.history.push(`/dashboard/admin/library/playlist/${res.id}/${res.name}`)}>{res.request_id}</td>
+                <td>{res.name}</td>
                 <td><Moment filter={toUpperCaseFilter} element="span"  format="DD/MM/YYYY HH:mm" add={{hours:5.5}}>{res.created_at}</Moment></td>
                 <td>{this.status(res.id,res.status)}</td>
                 <td>
@@ -139,21 +134,19 @@ class ChannelMaster extends React.Component{
     {
       return(<div class="cont_area">
         <button type="button" id="sidebarCollapse" class="btn btn-sidebar"><span><i class="fa fa-align-left"></i></span></button>
-          <BreadCrumb heading="Channel Master"/>
+          <BreadCrumb heading="Categories"/>
         <div class="box_t">
           <div class="buttons">
-            <a class="btn s_btn" href="Javascript:" onClick={()=>{this.setState({modal_type:"channel_master",open_portal:true});$("#portal_modal").addClass("show");$("body").addClass("bfix")}}>Add Channel <span><i class="fas fa-plus"></i></span></a>
+            <a class="btn s_btn" href="Javascript:" onClick={()=>{this.setState({modal_type:"add_category",open_portal:true});$("#portal_modal").addClass("show");$("body").addClass("bfix")}}>Add Category <span><i class="fas fa-plus"></i></span></a>
           </div>
-          <SearchComponent getData={this.getData} currentPage={this.state.currentPage} placeholder="Search Channel"/>
+          <SearchComponent getData={this.getData} currentPage={this.state.currentPage} placeholder="Search Category"/>
         </div>
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>Channel Id</th>
+                <th>Category Id</th>
                 <th>Name</th>
-                <th>Short Name</th>
-                <th>Location</th>
                 <th>Created At</th>
                 <th>Status</th>
                 <th class="ac">Action</th>
@@ -174,7 +167,7 @@ class ChannelMaster extends React.Component{
                     linkClass="page-link bold"
                   />
         </div>
-        {(open_portal) &&<Portal modalType={modal_type} portalData={this.state.portalData} modal_loading={modal_loading} closeModal={()=>this.setState({auth_err:'',open_portal:false,modal_loading_msg:'',modal_loading:false})} loading_msg={modal_loading_msg} createChannel={this.createChannel}/>}
+        {(open_portal) &&<Portal modalType={modal_type} portalData={this.state.portalData} modal_loading={modal_loading} closeModal={()=>this.setState({auth_err:'',open_portal:false,modal_loading_msg:'',modal_loading:false})} loading_msg={modal_loading_msg} createCategory={this.createCategory}/>}
         {/**/}
       </div>)
     }
@@ -184,4 +177,4 @@ class ChannelMaster extends React.Component{
     }
   }
 }
-export default ChannelMaster;
+export default Category;
